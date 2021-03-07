@@ -227,8 +227,5 @@ body .searchCityMaskAmount #selected-store-container #store-list #store-infomati
   .searchCityMaskAmount #selected-store-container {
     width: 100% !important;
   }
-  .searchCityMaskAmount #store-list {
-    background: #000 !important;
-  }
 }
 /*# sourceMappingURL=all.css.map */
