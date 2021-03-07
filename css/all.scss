@@ -1,0 +1,218 @@
+html,body{
+    width: 100%;
+    height: 100%;
+    .hide-container {
+        transform: translateX(-340px);
+    }
+    .flex {
+        display: flex;
+    }
+    .none {
+        display: none;
+    }
+    #map{
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        .leaflet-popup {
+            .leaflet-popup-tip-container {
+                .leaflet-popup-tip {
+                    background: #eee;
+                }
+            }
+        }
+        
+        
+        .leaflet-popup-content-wrapper {
+            background: #eee;
+            border-radius: 10px;
+            border: none;
+            .leaflet-popup-content {
+                background: #eee;
+                font-family: 'Kosugi Maru', sans-serif;
+                i {
+                    width: 10px;
+                    height: 10px;
+                    color: rgb(0, 61, 141);
+                    margin-right: 5px;
+                }
+                h4 {
+                    font-size: 20px;
+                    font-weight: 900;
+                    text-align: center;
+                }
+                p {
+                    border-bottom: 1px solid #bbb;
+                    padding-bottom: 10px;
+                }
+                p:last-child {
+                    border-bottom: none;
+                    padding-bottom: 0;
+                }
+                span {
+                    font-weight: 700;
+                }
+            }
+        } 
+        .leaflet-tile-pane {
+            filter: grayscale(0.5) contrast(0.5) brightness(1.2); 
+            
+        }
+        .marker-cluster {
+            div {
+                font-size: 13px;
+                font-family: 'Reggae One', cursive;
+                width: 30px;    
+                height: 30px;
+                border-radius: 50%;
+                line-height: 30px;
+                span {
+                    margin: auto;
+                }
+            }
+        }
+        // icon 背景陰影
+        .leaflet-marker-icon {
+            
+        }
+        // 大圈圈
+        .marker-cluster-large {
+            div {
+            }
+        }
+        
+    }
+    .searchCityMaskAmount {  
+        width: 100%; 
+        #slide-button {
+            width: 50px;
+            height: 50px;
+            position: fixed;
+            top: 10px;
+            left: 15px;
+            cursor: pointer;
+            box-shadow: 5px 2px 3px #333;
+            background: #fff;
+            justify-content: center;
+            i {
+                line-height: 50px;
+            }
+            &:hover {
+                background: #000;
+                color: #fff;
+                transition: 0.3s ease-in-out;
+            }
+        }
+        #selected-store-container {
+            width: 344px;
+            height: 100%;
+            overflow: auto;
+            box-shadow: 5px 2px 3px #333;
+            transition: 0.6s ease;
+            background: #fff;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            #close-button {
+                position: absolute;
+                right: 5px;
+                top: 5px;
+                cursor: pointer;
+            }
+            #search-region-container {
+                height: 25%;
+                background: rgb(49, 246, 171);
+                position: relative;
+                z-index: -1;
+                form {
+                    display: flex;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                    padding-top: 20px;
+                    select {
+                        width: 80%;
+                        margin-top: 20px;
+                        padding: 10px; 
+                        border-radius: 10px;
+                        outline: none;
+                        border: none;
+                    }
+                }
+                // .show-store {
+                //     transform: translateX(-50%);
+                //     left: 50%;
+                //     bottom: 10px;
+                //     position: absolute;
+                //     display: none;
+                //     button {
+                //         background: #fff;
+                //         color: rgb(49, 246, 171);
+                //         font-weight: 700;
+                //         border: none;
+                //         border-radius: 5px;
+                //         padding: 5px;
+                //     }
+                // }
+            }    
+            #store-list {
+                width: 100%;
+                background: #fff;
+                #store-infomation {
+                    padding: 15px;
+                    border-bottom: 1px solid #ddd;
+                    color: #333;
+                    &:hover {
+                        background: rgba(49, 246, 171, 0.1);
+                        cursor: pointer;
+                        transition: 0.4s ease;
+                    }
+                    h3 {
+                        font-weight: 900;
+                        font-size: 24px;
+                    }
+                    p {
+                        font-size: 15px;
+                        margin-top: 10px;
+                    }
+                    i {
+                        width: 10px;
+                        height: 10px;
+                        color: rgb(0, 61, 141);
+                        margin-right: 10px;
+                    }
+                    #adultMaskNumber,
+                    #childMaskNumber {
+                        margin-top: 10px;
+                        background: rgb(130, 197, 251);
+                        margin: auto;
+                        width: 80%;
+                        height: 30x;
+                        border-radius: 5px;
+                        line-height: 30px;
+                        color: #fff;
+                        text-align: center;
+                        span {
+                            font-weight: 700;
+                        }
+                    }
+                }
+            }   
+        }
+    }  
+}
+
+@media screen and (max-width: 480px){
+    .hide-container {
+        transform: translateX(-100%) !important;
+    }
+    .searchCityMaskAmount {
+        #selected-store-container {
+            width: 100% !important;            
+        }
+        #store-list {
+            background: #000 !important;
+        }       
+    }
+    
+}
