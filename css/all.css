@@ -217,7 +217,7 @@ body .searchCityMaskAmount #selected-store-container #store-list #store-infomati
   font-weight: 700;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 480px) {
   .hide-container {
     -webkit-transform: translateX(-100%) !important;
             transform: translateX(-100%) !important;
